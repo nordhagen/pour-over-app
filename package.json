@@ -1,0 +1,32 @@
+{
+  "name": "pour.no",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://nordhagen@github.com/nordhagen/pour.no.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nordhagen/pour.no/issues"
+  },
+  "homepage": "https://github.com/nordhagen/pour.no#readme",
+  "alias": {
+    "vue": "./node_modules/vue/dist/vue.common.js"
+  },
+  "dependencies": {
+    "parcel-bundler": "^1.11.0",
+    "vue": "^2.5.21",
+    "vue-hot-reload-api": "^2.3.1"
+  },
+  "devDependencies": {
+    "@vue/component-compiler-utils": "^2.3.1",
+    "vue-template-compiler": "^2.5.21"
+  }
+}
