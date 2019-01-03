@@ -1,14 +1,16 @@
 <template>
   <header>
-    <h1>{{appTitle}</h1>
+    <h1>{{appTitle}}</h1>
   </header>
 </template>
 
 <script>
 export default {
   name: 'AppHeader',
-  data: {
-    appTitle: () => 'pour.no'
+  data: () => {
+    return {
+      appTitle: 'pour.no'
+    }
   }
 }
 </script>
