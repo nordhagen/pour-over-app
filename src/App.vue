@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="app">
     <app-header></app-header>
     <brew-guide></brew-guide>
   </div>
@@ -18,3 +18,9 @@ export default {
 }
 
 </script>
+
+<style lang="postcss" scoped>
+.app {
+  padding: 1rem;
+}
+</style>
