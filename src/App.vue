@@ -21,5 +21,6 @@ export default {
 <style lang="postcss" scoped>
 .app {
   padding: 1rem;
+  color:#666;
 }
 </style>

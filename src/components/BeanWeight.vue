@@ -1,23 +1,21 @@
 <template>
-<div class="bean-weight">
-    <p class="instruction">
-      Grind grams of beans, based on a {{ratio}}:1 ratio (<button class="text-button">change</button>)
-    </p>
-    <input type="text" id="ratio" v-bind:value="beanWeight">
-</div>
+  <p class="bean-weight">
+    Grind <span class="value">{{beanWeight}}</span> grams of beans, based on a {{ratio}}:1 ratio (<button class="text-button">change</button>)
+  </p>
 </template>
 
 <script>
 export default {
   name: "BeanWeight",
   props: {
-    brewVolume:Number,
+    beanWeight:Number,
     ratio:Number
-  },
-  data() {
-    return {
-      beanWeight: Math.round(this.brewVolume / this.ratio)
-    }
   }
 };
 </script>
+
+<style lang="postcss" scoped>
+.value {
+  font-weight: 600;
+}
+</style>
