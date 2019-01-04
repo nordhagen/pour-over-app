@@ -16,7 +16,6 @@ Vue.component('BrewGuide', BrewGuide)
 export default {
   name: "App"
 }
-
 </script>
 
 <style lang="postcss" scoped>

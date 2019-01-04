@@ -1,24 +1,25 @@
 <template>
   <section class="brew-guide">
-    <brew-amount-input></brew-amount-input>
-    <bean-amount></bean-amount>
+    <brew-volume v-bind:brew-volume="brewVolume"></brew-volume>
+    <bean-weight v-bind:ratio="ratio" v-bind:brew-volume="brewVolume"></bean-weight>
   </section>
 </template>
 
 <script>
-  import BrewAmountInput from '../components/BrewAmountInput'
-  import BeanAmount from '../components/BeanAmount'
+  import BrewVolume from '../components/BrewVolume'
+  import BeanWeight from '../components/BeanWeight'
 
   export default {
     name: 'BrewGuide',
-    data: () => {
+    data() {
       return {
-        defaultRatio: '1/15'
+        brewVolume: 500,
+        ratio: 15
       }
     },
     components: {
-      BrewAmountInput,
-      BeanAmount
+      BrewVolume,
+      BeanWeight
     }
   }
 </script>
