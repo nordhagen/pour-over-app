@@ -13,7 +13,7 @@ export default {
   },
   methods: {
     notify(e){
-      this.$emit('update:brewVolume', parseInt(e.target.value, 10))
+      this.$emit('update:brew-volume', parseInt(e.target.value, 10))
     }
   }
 };

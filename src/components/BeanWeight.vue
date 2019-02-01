@@ -1,6 +1,6 @@
 <template>
   <p class="bean-weight">
-    Grind <span class="value">{{beanWeight}}</span> grams of beans, based on a {{ratio}}:1 ratio (<button class="text-button">change</button>)
+    Grind <span class="value">{{beanWeight}}</span> grams of beans, based on a {{ratio}}:1 ratio (<button v-on:click="$emit('edit:ratio')" class="text-button">change</button>)
   </p>
 </template>
 

@@ -5,7 +5,7 @@
     
     <brew-volume
       v-bind:brewVolume.sync="brewVolume"
-      v-on:update:brewVolume="computeBeanWeight"
+      v-on:update:brew-volume="computeBeanWeight"
     ></brew-volume>
     
     <water-to-coffee-ratio
@@ -13,7 +13,11 @@
       v-on:update:ratio="computeBeanWeight"
     ></water-to-coffee-ratio>
     
-    <bean-weight v-bind:beanWeight="beanWeight" v-bind:ratio="ratio"></bean-weight>
+    <bean-weight
+      v-bind:beanWeight="beanWeight"
+      v-bind:ratio="ratio"
+      v-on:edit:ratio="editRatio"
+    ></bean-weight>
   </section>
 </template>
 
@@ -39,6 +43,9 @@
     methods: {
       computeBeanWeight(){
         this.beanWeight = Math.round(this.brewVolume / this.ratio)
+      },
+      editRatio(){
+        console.log('edit')
       }
     }
   }
