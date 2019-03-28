@@ -7,10 +7,12 @@
 
 <script>
 export default {
-  name: "WaterToCoffeeRatio",
-  props: {
-    ratio:Number,
-    isVisible: true
+  name: "RatioInput",
+  props: { isVisible: true },
+  computed: {
+    ratio(){
+      return this.$store.state.ratio;
+    }
   },
   methods: {
     ready(){

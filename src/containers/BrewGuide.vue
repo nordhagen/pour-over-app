@@ -1,49 +1,25 @@
 <template>
   <section class="brew-guide">
-
-    <h2>Brewing {{brewVolume}} ml of coffee</h2>
-    
-    <brew-volume
-      v-bind:brewVolume.sync="brewVolume"
-      v-on:update:brew-volume="computeBeanWeight"
-    ></brew-volume>
-    
-    <water-to-coffee-ratio
-      v-bind:ratio.sync="ratio"
-      v-on:update:ratio="computeBeanWeight"
-    ></water-to-coffee-ratio>
-    
-    <bean-weight
-      v-bind:beanWeight="beanWeight"
-      v-bind:ratio="ratio"
-      v-on:edit:ratio="editRatio"
-    ></bean-weight>
+    <h2>Brewing {{this.$store.state.volume}} ml of coffee</h2>
+    <volume-input></volume-input>
+    <ratio-input></ratio-input>
+    <grind-instruction v-on:edit:ratio="editRatio" ></grind-instruction>
   </section>
 </template>
 
 <script>
-  import BrewVolume from '../components/BrewVolume'
-  import BeanWeight from '../components/BeanWeight'
-  import WaterToCoffeeRatio from '../components/WaterToCoffeeRatio'
+  import VolumeInput from '../components/VolumeInput'
+  import GrindInstruction from '../components/GrindInstruction'
+  import RatioInput from '../components/RatioInput'
 
   export default {
     name: 'BrewGuide',
-    data() {
-      return {
-        brewVolume: 500,
-        beanWeight: 0,
-        ratio: 15
-      }
-    },
     components: {
-      BrewVolume,
-      BeanWeight,
-      WaterToCoffeeRatio
+      VolumeInput,
+      GrindInstruction,
+      RatioInput
     },
     methods: {
-      computeBeanWeight(){
-        this.beanWeight = Math.round(this.brewVolume / this.ratio)
-      },
       editRatio(){
         console.log('edit')
       }

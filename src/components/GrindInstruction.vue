@@ -6,10 +6,15 @@
 
 <script>
 export default {
-  name: "BeanWeight",
-  props: {
-    beanWeight:Number,
-    ratio:Number
+  name: "GrindInstruction",
+  computed: {
+    beanWeight(){
+      console.log(this.$store.state.beanWeight)
+      return this.$store.getters.beanWeight;
+    },
+    ratio(){
+      return this.$store.state.ratio;
+    }
   }
 };
 </script>
