@@ -17,7 +17,9 @@ const store = new Vuex.Store({
     }
   },
   actions: {
-
+    updateRatio(context, payload) {
+      context.commit('updateRatio', payload.ratio)
+    }
   },
   getters: {
     beanWeight: state => Math.round(state.volume / state.ratio)

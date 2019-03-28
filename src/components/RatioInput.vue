@@ -22,7 +22,9 @@ export default {
       })
     },
     notify(e){
-      this.$emit('update:ratio', parseInt(e.target.value, 10))
+      this.$store.dispatch('updateRatio', {
+        ratio: parseInt(e.target.value, 10)
+      })
     },
     show() {
       
