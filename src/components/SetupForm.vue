@@ -18,7 +18,6 @@ export default {
       return this.$store.state.volume;
     },
     beanWeight(){
-      console.log(this.$store.state.beanWeight)
       return this.$store.getters.beanWeight;
     },
     ratio(){
