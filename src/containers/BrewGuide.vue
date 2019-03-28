@@ -2,7 +2,7 @@
   <section class="brew-guide">
     <h2>Brewing {{this.$store.state.volume}} ml of coffee</h2>
     <volume-input></volume-input>
-    <ratio-input></ratio-input>
+    <ratio-input v-show="showEditRatio"></ratio-input>
     <grind-instruction v-on:edit:ratio="editRatio" ></grind-instruction>
   </section>
 </template>
@@ -19,9 +19,12 @@
       GrindInstruction,
       RatioInput
     },
+    data: () => ({
+      showEditRatio: false
+    }),
     methods: {
       editRatio(){
-        console.log('edit')
+        this.showEditRatio = !this.showEditRatio
       }
     }
   }
