@@ -15,16 +15,16 @@
   "license": "ISC",
   "homepage": "https://github.com/nordhagen/pour.no#readme",
   "dependencies": {
-    "vue": "^2.5.21",
-    "vue-hot-reload-api": "^2.3.1",
-    "vuex": "^3.1.0"
+    "vue": "^2.6.10",
+    "vue-hot-reload-api": "^2.3.4",
+    "vuex": "^3.1.1"
   },
   "devDependencies": {
-    "@vue/component-compiler-utils": "^2.4.0",
+    "@vue/component-compiler-utils": "^2.6.0",
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
-    "parcel-bundler": "^1.12.3",
-    "stylus": "^0.54.5",
-    "vue-template-compiler": "^2.5.21"
+    "parcel-bundler": "^1.12.4",
+    "stylus": "^0.54.7",
+    "vue-template-compiler": "^2.6.10"
   }
 }

@@ -1,20 +1,19 @@
 <template>
   <section class="brew-guide">
-    <!-- <h2>Brewing {{this.$store.state.volume}} ml of coffee</h2> -->
-    <setup-form v-on:edit:ratio="toggleEditRatio"></setup-form>
-    <ratio-input v-show="showEditRatio"></ratio-input>
+    <!--<brew-amount-step></brew-amount-step>-->
+    <grind-boil-step></grind-boil-step>
   </section>
 </template>
 
 <script>
-  import SetupForm from '../components/SetupForm'
-  import RatioInput from '../components/RatioInput'
+  import BrewAmountStep from '../components/BrewAmountStep'
+  import GrindBoilStep from '../components/GrindBoilStep'
 
   export default {
     name: 'BrewGuide',
     components: {
-      SetupForm,
-      RatioInput
+      BrewAmountStep,
+      GrindBoilStep
     },
     data: () => ({
       showEditRatio: false
@@ -28,11 +27,27 @@
 </script>
 
 <style lang="postcss">
-  h1 {
-    font-family: sans-serif;
-  }
-  .brew-guide, input {
-    font-family: sans-serif;
-    font-size: 16px;
-  }
+.brew-guide {
+  width: 100%;
+}
+
+.brew-guide p, .brew-guide h2 {
+  text-align: center;
+}
+
+.brew-guide h2 {
+  padding: 0 40px;
+}
+
+.brew-guide p {
+  padding: 0 100px;
+}
+
+.brew-step {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  padding-top: 120px;
+  min-height: 100vh;
+}
 </style>

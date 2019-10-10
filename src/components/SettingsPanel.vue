@@ -7,7 +7,7 @@
 
 <script>
 export default {
-  name: "RatioInput",
+  name: "SettingsPanel",
   props: { isVisible: true },
   computed: {
     ratio(){
@@ -26,13 +26,3 @@ export default {
   }
 };
 </script>
-
-<style lang="postcss" scoped>
-.callout {
-  display: block;
-
-}
-.callout.visible {
-  display:block;
-}
-</style>

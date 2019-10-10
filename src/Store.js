@@ -5,12 +5,21 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
   state: {
-    volume: 500,
+    brewVolume: 200,
+    rinseWaterVolume: 100,
+    bloomTime: 45,
+    brewMethod: 'James Hoffman',
     ratio: 15
   },
   mutations: {
-    updateVolume(state, payload) {
-      state.volume = payload;
+    updateBrewVolume(state, payload) {
+      state.brewVolume = payload;
+    },
+    updateRinseWaterVolume(state, payload) {
+      state.rinseWaterVolume = payload;
+    },
+    updateBloomTime(state, payload) {
+      state.bloomTime = payload;
     },
     updateRatio(state, payload){
       state.ratio = payload;
@@ -19,10 +28,20 @@ const store = new Vuex.Store({
   actions: {
     updateRatio(context, payload) {
       context.commit('updateRatio', payload.ratio)
+    },
+    updateBloomTime(context, payload) {
+      context.commit('updateBloomTime', payload.bloomTime)
+    },
+    updateRinseWaterVolume(context, payload) {
+      context.commit('updateRinseWaterVolume', payload.rinseWaterVolume)
+    },
+    updateBrewVolume(context, payload) {
+      context.commit('updateBrewVolume', payload.brewVolume)
     }
   },
   getters: {
-    beanWeight: state => Math.round(state.volume / state.ratio)
+    beanWeight: state => Math.round(state.brewVolume / state.ratio),
+    boilVolume: state => Math.round(state.brewVolume + state.rinseWaterVolume)
   }
 })
 
