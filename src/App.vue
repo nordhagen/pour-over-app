@@ -1,7 +1,8 @@
 <template>
   <div class="app">
-    <app-header appTitle="pour.no"></app-header>
+    <app-header appTitle="FancyBeans"></app-header>
     <brew-guide></brew-guide>
+    <!--<settings-panel></settings-panel>-->
   </div>
 </template>
 
@@ -22,62 +23,7 @@ export default {
 
 <style lang="postcss">
 
-@font-face {
-  font-family: 'Bhavuka Regular';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Bhavuka Regular'), url('assets/Bhavuka-Regular.woff') format('woff');
-}
-
-* {
-  box-sizing: border-box;
-  font-family: "Bhavuka Regular";
-  font-style: normal;
-  font-weight: normal;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: subpixel-antialiased;
-}
-
-
-html, body {
-  margin: 0;
-}
-
-body {
-  min-height: 100vh;
-  background: #202020;
-  color: #eee;
-}
-
-
-h1, h2 {
-  font-size: 36px;
-  text-align: center;
-  color: #888;
-}
-
-p {
-  font-size: 18px;
-  color: #888;
-}
-
-.highlight {
-  color: #eee;
-}
-
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0,0,0,0);
-  border: 0;
-}
-
 .app {
-  min-height: 100vh;
   max-width: 600px;
   position: relative;
   margin: 0 auto;

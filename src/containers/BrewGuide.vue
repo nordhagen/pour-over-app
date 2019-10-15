@@ -48,6 +48,6 @@
   top: 20px;
   width: 100%;
   padding-top: 120px;
-  min-height: 100vh;
+  height: 100%;
 }
 </style>
