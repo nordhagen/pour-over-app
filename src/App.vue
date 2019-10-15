@@ -2,7 +2,7 @@
   <div class="app">
     <app-header appTitle="FancyBeans"></app-header>
     <brew-guide></brew-guide>
-    <!--<settings-panel></settings-panel>-->
+    <settings-panel v-show="settingsVisible"></settings-panel>
   </div>
 </template>
 
@@ -11,13 +11,27 @@ import Vue from 'vue'
 import AppHeader from './containers/AppHeader'
 import BrewGuide from './containers/BrewGuide'
 import SettingsPanel from './components/SettingsPanel'
-
+import { bus } from './bus.js'
+  
 Vue.component('AppHeader', AppHeader)
 Vue.component('BrewGuide', BrewGuide)
 Vue.component('SettingsPanel', SettingsPanel)
 
 export default {
-  name: "App"
+  name: "App",
+  data: function () {
+    return {
+      settingsVisible: false
+    }
+  },
+  methods: {
+    onShowSettings (e) {
+      this.settingsVisible = !this.settingsVisible
+    }
+  },
+  mounted(){
+    bus.$on('show:settings', () => this.settingsVisible = !this.settingsVisible)
+  }
 }
 </script>
 
@@ -45,6 +59,11 @@ export default {
   height: 40px;
   border-radius: 20px;
   position: relative;
+}
+
+.btn:focus {
+  outline: none;
+  border: 2px solid #988C50;
 }
 
 .btn:after {
