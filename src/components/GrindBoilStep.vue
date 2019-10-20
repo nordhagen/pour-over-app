@@ -1,12 +1,13 @@
 <template>
   <section class="brew-step">
     <h2>Grind <span class="highlight">{{beanWeight}} grams</span> of beans and boil <span class="highlight">{{boilVolume}} ml</span> of water to make {{brewVolume}} ml of coffee</h2>
-    <p>Based on a {{ratio}}:1 ratio and {{rinseWaterVolume}} ml to rinse filter. <button class="txt-btn">Change</button></p>
+    <p>Based on a {{ratio}}:1 ratio and {{rinseWaterVolume}} ml to rinse filter. <button @click="showSettings" class="txt-btn">Change</button></p>
     <nav class="bottom-nav"><button class="btn next-btn"><span class="btn-label">Continue</span></button></nav>
   </section>
 </template>
 
 <script>
+import {bus} from '../bus'
 export default {
   name: "GrindBoilStep",
   computed: {
@@ -29,6 +30,9 @@ export default {
   methods: {
     updateVolume(e){
       this.$store.commit('updateVolume', e.target.value)
+    },
+    showSettings () {
+      bus.$emit('show:settings')
     }
   }
 };
