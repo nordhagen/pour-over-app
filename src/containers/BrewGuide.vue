@@ -1,6 +1,6 @@
 <template>
   <section class="brew-guide">
-    <!--<brew-amount-step></brew-amount-step>-->
+    <!-- <brew-amount-step></brew-amount-step> -->
     <grind-boil-step></grind-boil-step>
   </section>
 </template>
