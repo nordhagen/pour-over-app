@@ -38,9 +38,10 @@ export default {
 <style lang="postcss">
 
 .app {
-  max-width: 600px;
+  width:100%;
   position: relative;
   margin: 0 auto;
+  padding: 20px;
 }
 
 .txt-btn {

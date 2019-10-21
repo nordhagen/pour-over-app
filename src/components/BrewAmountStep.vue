@@ -29,15 +29,24 @@ export default {
 <style lang="postcss" scoped>
 
 .button-container {
-  text-align: center;
+  display:grid;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+  grid-column-start: 4;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  width: 300px;
 }
 .amount-button {
-  background: #eee;
-  border: none;
-  border-radius: 0;
+  background:none;
+  border: 1px solid #888;
+  border-radius: 10px;
   width: 100px;
   padding: 15px;
-  margin-bottom: 10px;
   height: 100px;
+  color: #eee;
+  outline: none;
+}
+.amount-button:focus, .amount-button:hover {
+  border-color: #eee;
 }
 </style>

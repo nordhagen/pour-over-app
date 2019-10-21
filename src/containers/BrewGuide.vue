@@ -1,7 +1,7 @@
 <template>
   <section class="brew-guide">
-    <!-- <brew-amount-step></brew-amount-step> -->
-    <grind-boil-step></grind-boil-step>
+    <brew-amount-step></brew-amount-step>
+    <!-- <grind-boil-step></grind-boil-step> -->
   </section>
 </template>
 
@@ -45,8 +45,6 @@
 
 .brew-step {
   position: absolute;
-  top: 20px;
-  width: 100%;
   padding-top: 120px;
   height: 100%;
 }
